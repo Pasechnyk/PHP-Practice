@@ -93,8 +93,6 @@ class CategoryController extends Controller
         return response()->json($category,200, ['Charset' => 'utf-8']);
     }
 
-    // Task 1
-    // Update function with validations
     /**
      * @OA\Post(
      *     tags={"Category"},
@@ -128,6 +126,8 @@ class CategoryController extends Controller
      *     @OA\Response(response="200", description="Add Category.")
      * )
      */
+    
+    // Task - Update function with validations
     public function edit($id, Request $request) {
         $category = Categories::findOrFail($id);
 
